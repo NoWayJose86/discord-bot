@@ -1,0 +1,16 @@
+app = "jose-discord-bot"
+primary_region = "iad"
+
+[build]
+
+[processes]
+  app = "python bot.py"
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 512
+
+[mounts]
+  source = "bot_data"
+  destination = "/app/data"
